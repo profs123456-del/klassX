@@ -46,50 +46,50 @@ const CHANNELS = [
 ];
 
 const bosses = [
-  {id:"1",name:"MP HOLE",fullName:"CH-0 MP HOLE Ds Jr.",channel:0,respawn:1},
-  {id:"2",name:"PH HOLE",fullName:"CH-0 PH HOLE Ds Jr.",channel:0,respawn:1},
-  {id:"3",name:"SG CAMPUS",fullName:"CH-0 SG CAMPUS Ds Jr.",channel:0,respawn:1},
-  {id:"4",name:"MP CAMPUS",fullName:"CH-0 MP CAMPUS Ds Jr.",channel:0,respawn:1},
-  {id:"5",name:"PH CAMPUS",fullName:"CH-0 PH CAMPUS Ds Jr.",channel:0,respawn:1},
-  {id:"6",name:"Etherial MP",fullName:"CH-0 Etherial MP.",channel:0,respawn:2},
-  {id:"7",name:"Etherial PH",fullName:"CH-0 Etherial PH.",channel:0,respawn:2},
-  {id:"8",name:"Etherial SG",fullName:"CH-0 Etherial SG.",channel:0,respawn:2},
-  {id:"9",name:"Ninja Knife",fullName:"CH-0 Ninja Knife.",channel:0,respawn:2},
-  {id:"10",name:"DARK SWORDSMAN",fullName:"CH-0 Dark swordsman.",channel:0,respawn:2},
-  {id:"11",name:"DARK ART MASTER",fullName:"CH-0 DARK ART MASTER",channel:0,respawn:6},
-  {id:"12",name:"MP HOLE",fullName:"CH-1 MP HOLE Ds Jr.",channel:1,respawn:1},
-  {id:"13",name:"PH HOLE",fullName:"CH-1 PH HOLE Ds Jr.",channel:1,respawn:1},
-  {id:"14",name:"SG CAMPUS",fullName:"CH-1 SG CAMPUS Ds Jr.",channel:1,respawn:1},
-  {id:"15",name:"MP CAMPUS",fullName:"CH-1 MP CAMPUS Ds Jr.",channel:1,respawn:1},
-  {id:"16",name:"PH CAMPUS",fullName:"CH-1 PH CAMPUS Ds Jr.",channel:1,respawn:1},
-  {id:"17",name:"Etherial MP",fullName:"CH-1 Etherial MP.",channel:1,respawn:2},
-  {id:"18",name:"Etherial PH",fullName:"CH-1 Etherial PH.",channel:1,respawn:2},
-  {id:"19",name:"Etherial SG",fullName:"CH-1 Etherial SG.",channel:1,respawn:2},
-  {id:"20",name:"Ninja Knife",fullName:"CH-1 Ninja Knife.",channel:1,respawn:2},
-  {id:"21",name:"DARK SWORDSMAN",fullName:"CH-1 Dark swordsman.",channel:1,respawn:2},
-  {id:"22",name:"DARK ART MASTER",fullName:"CH-1 DARK ART MASTER",channel:1,respawn:6},
-  {id:"23",name:"MP HOLE",fullName:"CH-2 MP HOLE Ds Jr.",channel:2,respawn:1},
-  {id:"24",name:"PH HOLE",fullName:"CH-2 PH HOLE Ds Jr.",channel:2,respawn:1},
-  {id:"25",name:"SG CAMPUS",fullName:"CH-2 SG CAMPUS Ds Jr.",channel:2,respawn:1},
-  {id:"26",name:"MP CAMPUS",fullName:"CH-2 MP CAMPUS Ds Jr.",channel:2,respawn:1},
-  {id:"27",name:"PH CAMPUS",fullName:"CH-2 PH CAMPUS Ds Jr.",channel:2,respawn:1},
-  {id:"28",name:"Etherial MP",fullName:"CH-2 Etherial MP.",channel:2,respawn:2},
-  {id:"29",name:"Etherial PH",fullName:"CH-2 Etherial PH.",channel:2,respawn:2},
-  {id:"30",name:"Etherial SG",fullName:"CH-2 Etherial SG.",channel:2,respawn:2},
-  {id:"31",name:"Ninja Knife",fullName:"CH-2 Ninja Knife.",channel:2,respawn:2},
-  {id:"32",name:"DARK SWORDSMAN",fullName:"CH-2 Dark swordsman.",channel:2,respawn:2},
-  {id:"33",name:"DARK ART MASTER",fullName:"CH-2 DARK ART MASTER",channel:2,respawn:6},
-  {id:"34",name:"MP HOLE",fullName:"CH-2 MP HOLE Ds Jr.",channel:3,respawn:1},
-  {id:"35",name:"PH HOLE",fullName:"CH-2 PH HOLE Ds Jr.",channel:3,respawn:1},
-  {id:"36",name:"SG CAMPUS",fullName:"CH-2 SG CAMPUS Ds Jr.",channel:3,respawn:1},
-  {id:"37",name:"MP CAMPUS",fullName:"CH-2 MP CAMPUS Ds Jr.",channel:3,respawn:1},
-  {id:"38",name:"PH CAMPUS",fullName:"CH-2 PH CAMPUS Ds Jr.",channel:3,respawn:1},
-  {id:"39",name:"Etherial MP",fullName:"CH-2 Etherial MP.",channel:3,respawn:2},
-  {id:"40",name:"Etherial PH",fullName:"CH-2 Etherial PH.",channel:3,respawn:2},
-  {id:"41",name:"Etherial SG",fullName:"CH-2 Etherial SG.",channel:3,respawn:2},
-  {id:"42",name:"Ninja Knife",fullName:"CH-2 Ninja Knife.",channel:3,respawn:2},
-  {id:"43",name:"DARK SWORDSMAN",fullName:"CH-2 Dark swordsman.",channel:3,respawn:2},
-  {id:"44",name:"DARK ART MASTER",fullName:"CH-2 DARK ART MASTER",channel:3,respawn:6},
+  {id:"1",name:"MP HOLE",fullName:"CH-0 MP HOLE Ds Jr.",channel:0,respawn:62},
+  {id:"2",name:"PH HOLE",fullName:"CH-0 PH HOLE Ds Jr.",channel:0,respawn:62},
+  {id:"3",name:"SG CAMPUS",fullName:"CH-0 SG CAMPUS Ds Jr.",channel:0,respawn:62},
+  {id:"4",name:"MP CAMPUS",fullName:"CH-0 MP CAMPUS Ds Jr.",channel:0,respawn:62},
+  {id:"5",name:"PH CAMPUS",fullName:"CH-0 PH CAMPUS Ds Jr.",channel:0,respawn:62},
+  {id:"6",name:"Etherial MP",fullName:"CH-0 Etherial MP.",channel:0,respawn:124},
+  {id:"7",name:"Etherial PH",fullName:"CH-0 Etherial PH.",channel:0,respawn:124},
+  {id:"8",name:"Etherial SG",fullName:"CH-0 Etherial SG.",channel:0,respawn:124},
+  {id:"9",name:"Ninja Knife",fullName:"CH-0 Ninja Knife.",channel:0,respawn:124},
+  {id:"10",name:"DARK SWORDSMAN",fullName:"CH-0 Dark swordsman.",channel:0,respawn:124},
+  {id:"11",name:"DARK ART MASTER",fullName:"CH-0 DARK ART MASTER",channel:0,respawn:360},
+  {id:"12",name:"MP HOLE",fullName:"CH-1 MP HOLE Ds Jr.",channel:1,respawn:62},
+  {id:"13",name:"PH HOLE",fullName:"CH-1 PH HOLE Ds Jr.",channel:1,respawn:62},
+  {id:"14",name:"SG CAMPUS",fullName:"CH-1 SG CAMPUS Ds Jr.",channel:1,respawn:62},
+  {id:"15",name:"MP CAMPUS",fullName:"CH-1 MP CAMPUS Ds Jr.",channel:1,respawn:62},
+  {id:"16",name:"PH CAMPUS",fullName:"CH-1 PH CAMPUS Ds Jr.",channel:1,respawn:62},
+  {id:"17",name:"Etherial MP",fullName:"CH-1 Etherial MP.",channel:1,respawn:124},
+  {id:"18",name:"Etherial PH",fullName:"CH-1 Etherial PH.",channel:1,respawn:124},
+  {id:"19",name:"Etherial SG",fullName:"CH-1 Etherial SG.",channel:1,respawn:124},
+  {id:"20",name:"Ninja Knife",fullName:"CH-1 Ninja Knife.",channel:1,respawn:124},
+  {id:"21",name:"DARK SWORDSMAN",fullName:"CH-1 Dark swordsman.",channel:1,respawn:124},
+  {id:"22",name:"DARK ART MASTER",fullName:"CH-1 DARK ART MASTER",channel:1,respawn:360},
+  {id:"23",name:"MP HOLE",fullName:"CH-2 MP HOLE Ds Jr.",channel:2,respawn:62},
+  {id:"24",name:"PH HOLE",fullName:"CH-2 PH HOLE Ds Jr.",channel:2,respawn:62},
+  {id:"25",name:"SG CAMPUS",fullName:"CH-2 SG CAMPUS Ds Jr.",channel:2,respawn:62},
+  {id:"26",name:"MP CAMPUS",fullName:"CH-2 MP CAMPUS Ds Jr.",channel:2,respawn:62},
+  {id:"27",name:"PH CAMPUS",fullName:"CH-2 PH CAMPUS Ds Jr.",channel:2,respawn:62},
+  {id:"28",name:"Etherial MP",fullName:"CH-2 Etherial MP.",channel:2,respawn:124},
+  {id:"29",name:"Etherial PH",fullName:"CH-2 Etherial PH.",channel:2,respawn:124},
+  {id:"30",name:"Etherial SG",fullName:"CH-2 Etherial SG.",channel:2,respawn:124},
+  {id:"31",name:"Ninja Knife",fullName:"CH-2 Ninja Knife.",channel:2,respawn:124},
+  {id:"32",name:"DARK SWORDSMAN",fullName:"CH-2 Dark swordsman.",channel:2,respawn:124},
+  {id:"33",name:"DARK ART MASTER",fullName:"CH-2 DARK ART MASTER",channel:2,respawn:360},
+  {id:"34",name:"MP HOLE",fullName:"CH-3 MP HOLE Ds Jr.",channel:3,respawn:62},
+  {id:"35",name:"PH HOLE",fullName:"CH-3 PH HOLE Ds Jr.",channel:3,respawn:62},
+  {id:"36",name:"SG CAMPUS",fullName:"CH-3 SG CAMPUS Ds Jr.",channel:3,respawn:62},
+  {id:"37",name:"MP CAMPUS",fullName:"CH-3 MP CAMPUS Ds Jr.",channel:3,respawn:62},
+  {id:"38",name:"PH CAMPUS",fullName:"CH-3 PH CAMPUS Ds Jr.",channel:3,respawn:62},
+  {id:"39",name:"Etherial MP",fullName:"CH-3 Etherial MP.",channel:3,respawn:124},
+  {id:"40",name:"Etherial PH",fullName:"CH-3 Etherial PH.",channel:3,respawn:124},
+  {id:"41",name:"Etherial SG",fullName:"CH-3 Etherial SG.",channel:3,respawn:124},
+  {id:"42",name:"Ninja Knife",fullName:"CH-3 Ninja Knife.",channel:3,respawn:124},
+  {id:"43",name:"DARK SWORDSMAN",fullName:"CH-3 Dark swordsman.",channel:3,respawn:124},
+  {id:"44",name:"DARK ART MASTER",fullName:"CH-3 DARK ART MASTER",channel:3,respawn:360},
 ];
 
 /* Map of boss-name substring -> background image file.
@@ -284,8 +284,8 @@ db.ref("bosses").on("value", snapshot => {
 /* =========================
    ✅ SET NEXT (MANUAL)
    ========================= */
-function setNext(id,h,k){
-  const nextTime = k.getTime() + h * 3600000;
+function setNext(id,mins,k){
+  const nextTime = k.getTime() + mins * 60000;
   db.ref("bosses/" + id).set(nextTime);
   alerted[id] = false;
   warnedTenMin[id] = false;
@@ -294,7 +294,7 @@ function setNext(id,h,k){
 /* =========================
    ✅ BUTTON ACTIONS
    ========================= */
-function now(id,h){
+function now(id,mins){
   // prevent clicking before server time is ready
   if(!serverReady){
     const pinError = document.getElementById("pinError");
@@ -307,7 +307,7 @@ function now(id,h){
   }
 
   const serverNow = Date.now() + serverOffset;
-  const nextTime = serverNow + h * 3600000;
+  const nextTime = serverNow + mins * 60000;
 
   db.ref("bosses/" + id).set(nextTime);
   alerted[id] = false;
@@ -321,10 +321,10 @@ function now(id,h){
   });
 }
 
-function manual(id,h){
+function manual(id,mins){
   const v = document.getElementById(id + "-input").value;
   if(!v) return alert("Enter time");
-  setNext(id, h, new Date(v));
+  setNext(id, mins, new Date(v));
 }
 
 function resetAll(){
