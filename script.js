@@ -421,7 +421,7 @@ function update(){
   if(soonId){
     document.getElementById(soonId + "-card").classList.add("next");
     const b = bosses.find(x => x.id === soonId);
-    document.getElementById("nextBossName").textContent = b.name;
+    document.getElementById("nextBossName").textContent = "CH " + b.channel + " - " + b.name;
     document.getElementById("nextBossTimer").textContent = document.getElementById(soonId + "-timer").textContent;
 
     const soonTs = firebaseBosses[soonId];
