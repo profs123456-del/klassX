@@ -27,7 +27,7 @@ db.ref(".info/serverTimeOffset").on("value", snap => {
    ✅ SETTINGS
    ========================= */
 const HISTORY_LIMIT = 400;     // show last 200 logs
-const ADMIN_PIN = "kamatis";      // change this
+const ADMIN_PIN = "klassx";      // change this
 
 let inputLock = false;
 document.addEventListener("focusin", e => { if (e.target.type === "datetime-local") inputLock = true; });
@@ -449,3 +449,127 @@ function update(){
 }
 
 setInterval(update, 1000);
+
+/* =========================
+   ✅ DRAG-TO-SCROLL (channels wrapper)
+   Lets users click+drag left/right to pan between
+   channel panels instead of needing a scrollbar —
+   handy when the browser window is narrow.
+   ========================= */
+(function initDragScroll(){
+  const wrapper = channelsWrapper;
+  if(!wrapper) return;
+
+  const DRAG_THRESHOLD = 6; // px of movement before it counts as a drag, not a click
+  let isPointerDown = false;
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+
+  function isFormControl(el){
+    return el.closest("input, textarea, select, button, .datetime-input");
+  }
+
+  wrapper.addEventListener("mousedown", (e) => {
+    // Only left-click drags
+    if(e.button !== 0) return;
+    isPointerDown = true;
+    isDragging = false;
+    startX = e.pageX;
+    startScrollLeft = wrapper.scrollLeft;
+
+    // Stop the browser's native text-selection drag from starting at all
+    // (unless the user is actually clicking into an input/button).
+    if(!isFormControl(e.target)){
+      e.preventDefault();
+    }
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if(!isPointerDown) return;
+    const dx = e.pageX - startX;
+
+    if(!isDragging && Math.abs(dx) > DRAG_THRESHOLD){
+      isDragging = true;
+      wrapper.classList.add("dragging");
+    }
+
+    if(isDragging){
+      e.preventDefault();
+      wrapper.scrollLeft = startScrollLeft - dx;
+    }
+  });
+
+  function endDrag(){
+    if(isDragging){
+      wrapper.classList.remove("dragging");
+      // Swallow the click that follows a drag so buttons/toggles
+      // underneath the cursor don't accidentally fire.
+      const suppressClick = (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        window.removeEventListener("click", suppressClick, true);
+      };
+      window.addEventListener("click", suppressClick, true);
+      setTimeout(() => window.removeEventListener("click", suppressClick, true), 0);
+    }
+    isPointerDown = false;
+    isDragging = false;
+  }
+
+  window.addEventListener("mouseup", endDrag);
+  wrapper.addEventListener("mouseleave", (e) => {
+    // Only end the drag if the mouse actually left the window area over the wrapper edge,
+    // not just moved over a child element (mouseleave on wrapper fires for children too
+    // only if relatedTarget is outside wrapper).
+    if(!wrapper.contains(e.relatedTarget)) endDrag();
+  });
+})();
+
+/* =========================
+   ✅ POP-UP GUIDE
+   ========================= */
+(function initGuide(){
+  const overlay   = document.getElementById("guideOverlay");
+  const helpBtn   = document.getElementById("guideHelpBtn");
+  const closeBtn  = document.getElementById("guideCloseBtn");
+  const gotItBtn  = document.getElementById("guideGotItBtn");
+  const dontShow  = document.getElementById("guideDontShow");
+  const STORAGE_KEY = "ran-tracker-guide-dismissed";
+
+  function guideDismissed(){
+    try{ return localStorage.getItem(STORAGE_KEY) === "1"; }catch(e){ return false; }
+  }
+  function setGuideDismissed(v){
+    try{ localStorage.setItem(STORAGE_KEY, v ? "1" : "0"); }catch(e){}
+  }
+
+  function openGuide(){
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeGuide(){
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+    if(dontShow && dontShow.checked) setGuideDismissed(true);
+  }
+
+  if(helpBtn) helpBtn.onclick = openGuide;
+  if(closeBtn) closeBtn.onclick = closeGuide;
+  if(gotItBtn) gotItBtn.onclick = closeGuide;
+
+  // Click outside the modal to close
+  if(overlay){
+    overlay.addEventListener("click", (e) => {
+      if(e.target === overlay) closeGuide();
+    });
+  }
+
+  // Escape key to close
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && overlay && overlay.classList.contains("open")) closeGuide();
+  });
+
+  // Auto-show on first visit only
+  if(!guideDismissed()) openGuide();
+})();
