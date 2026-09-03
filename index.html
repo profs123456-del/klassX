@@ -49,6 +49,82 @@
 
 <audio id="sound"><source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 
+<!-- ✅ HELP / POP-UP GUIDE -->
+<button id="guideHelpBtn" title="How to use the tracker" aria-label="Help">?</button>
+
+<div id="guideOverlay" class="guide-overlay">
+  <div class="guide-modal">
+    <button id="guideCloseBtn" class="guide-close" aria-label="Close">&times;</button>
+
+    <div class="guide-header">
+      <h2>TRACKER <span>POP-UP GUIDE</span></h2>
+      <p>Your complete guide to using the RAN Tracker.</p>
+    </div>
+
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="guide-step-num">1</div>
+        <h3>CLICK <span class="c-red">KILLED NOW</span><br>TO START THE TIMER</h3>
+        <p>After clicking <b>Killed Now</b>, the timer will start counting down to the next spawn.</p>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-num">2</div>
+        <h3>CLICK THE <span class="c-cyan">CALENDAR ICON</span><br>TO EDIT THE TIME</h3>
+        <p>Click the calendar icon to choose a new date &amp; time.</p>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-num">3</div>
+        <h3>THEN CLICK<br><span class="c-blue">SET MANUAL</span></h3>
+        <p>After setting the date &amp; time, click <b>Set Manual</b> to save the time to the tracker.</p>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-num">4</div>
+        <h3>CLICK <span class="c-blue">RESET ALL</span><br>IF THE SERVER IS RESTART</h3>
+        <p>Use this if the server is restarted, to reset all timers at once.</p>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-num">5</div>
+        <h3>IF YOU LOST THE TIMER<br>CHECK <span class="c-teal">KILL HISTORY</span></h3>
+        <p>Check the Kill History to find the latest kill time, then edit it manually into your tracker.</p>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-num">6</div>
+        <h3>TO CLEAR HISTORY<br>INPUT THE <span class="c-gold">ADMIN PIN</span></h3>
+        <p>Enter your Admin PIN then click OK to clear the Kill History.</p>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-num">7</div>
+        <h3>CLICK &amp; DRAG TO<br><span class="c-cyan">PAN CHANNELS</span></h3>
+        <p>On a small browser window, click and hold anywhere on the channel panels then drag left or right to move between CH 0, 1, 2 and 3.</p>
+      </div>
+    </div>
+
+    <div class="guide-summary">
+      <h4>QUICK SUMMARY</h4>
+      <div class="guide-summary-items">
+        <div class="summary-item"><span class="summary-icon c-red">🎯</span><span>Killed Now<br>to start the timer</span></div>
+        <div class="summary-item"><span class="summary-icon c-cyan">📅</span><span>Edit time using<br>the calendar</span></div>
+        <div class="summary-item"><span class="summary-icon c-blue">💾</span><span>Set Manual to<br>save the time</span></div>
+        <div class="summary-item"><span class="summary-icon c-gold">🔄</span><span>Reset All if server<br>is restart</span></div>
+        <div class="summary-item"><span class="summary-icon c-teal">📜</span><span>Check Kill History<br>if you lost the timer</span></div>
+        <div class="summary-item"><span class="summary-icon c-cyan">🛡️</span><span>Admin PIN to<br>clear history</span></div>
+        <div class="summary-item"><span class="summary-icon c-cyan">🖱️</span><span>Click &amp; drag to<br>pan channels</span></div>
+      </div>
+    </div>
+
+    <div class="guide-footer">
+      <label class="guide-dontshow"><input type="checkbox" id="guideDontShow"> Don't show this again</label>
+      <button id="guideGotItBtn" class="guide-gotit">GOT IT</button>
+    </div>
+  </div>
+</div>
+
 <!-- Firebase (must load before script.js) -->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
