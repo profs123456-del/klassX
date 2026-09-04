@@ -473,16 +473,21 @@ setInterval(update, 1000);
   wrapper.addEventListener("mousedown", (e) => {
     // Only left-click drags
     if(e.button !== 0) return;
+
+    // If the click started on a button/input/etc, don't track it as a
+    // potential drag at all — otherwise normal mouse jitter while clicking
+    // (very common with a real mouse) can cross the drag threshold and
+    // cause the click to be swallowed by endDrag()'s suppressClick logic,
+    // making buttons like "Killed Now" seem to randomly not respond.
+    if(isFormControl(e.target)) return;
+
     isPointerDown = true;
     isDragging = false;
     startX = e.pageX;
     startScrollLeft = wrapper.scrollLeft;
 
-    // Stop the browser's native text-selection drag from starting at all
-    // (unless the user is actually clicking into an input/button).
-    if(!isFormControl(e.target)){
-      e.preventDefault();
-    }
+    // Stop the browser's native text-selection drag from starting at all.
+    e.preventDefault();
   });
 
   window.addEventListener("mousemove", (e) => {
